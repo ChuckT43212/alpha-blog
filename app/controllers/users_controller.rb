@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     
     if @user.save
       
-      flash[:success] = 'Welcome to the alpha blog #{@user.username}"
+      flash[:success] = "Welcome to the alpha blog #{@user.username}"
       redirect_to articles_path
       
       
