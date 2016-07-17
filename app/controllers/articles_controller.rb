@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
   
   def index 
     
-    @articles = Article.all #you can all this variable whatever you want
+    @articles = Article.all #you can call this variable whatever you want
     
   end
   
@@ -25,6 +25,7 @@ class ArticlesController < ApplicationController
   def create
     
     @article = Article.new(article_params)
+    @article.user = User.first
     
     if @article.save
       flash[:success] = "Article successfully created"
