@@ -6,7 +6,8 @@ class ArticlesController < ApplicationController
   
   def index 
     
-    @articles = Article.all #you can call this variable whatever you want
+    @articles = Article.paginate(page: params[:page], per_page: 5)
+    #Article.all you can call this variable whatever you want
     
   end
   
